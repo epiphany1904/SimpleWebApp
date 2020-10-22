@@ -1,0 +1,98 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <link href="content/style/index.css" rel="stylesheet" />
+
+    <title></title>
+</head>
+<body>
+    <form>
+
+
+        <div class="container">
+            <div id="questions">
+                <span class="close">x</span>
+                <article>
+                    <label class="default-text big-text">Query: {The Great Wall}</label>
+                    <section class="form-group">
+                        <span class=" default-text form-control">
+                            1. How is the entity on the right panel relevant to the query?
+                        </span>
+
+                        <ul class="questions">
+                            <li>
+                                <input id="ex" type="radio" value="100"  onclick="question1(this)" name="q1" />
+                                <label for="ex">Excellent</label>
+                            </li>
+                            <li>
+                                <input id="good" type="radio" value="50" onclick="question1(this)" name="q1" />
+                                <label for="good">Good</label>
+                            </li>
+                            <li>
+                                <input id="poor" type="radio" value="0" onclick="question1(this)" name="q1" />
+                                <label for="poor">Poor</label>
+                            </li>
+                        </ul>
+                    </section>
+                    <section id="question2" class="form-group">
+                        <span class="default-text form-control">
+                            2. Which part of the content are relevant to the query?
+                        </span>
+                        <ul class="questions">
+                            <li>
+                                <input id="img" name="stat2" onclick="question2()" type="checkbox" value="50" />
+                                <label for="img">Image</label>
+                            </li>
+                            <li>
+                                <input id="Name" name="stat2" type="checkbox" onclick="question2()" value="50" />
+                                <label for="Name">Name</label>
+                            </li>
+                            <li>
+                                <input id="Desc" name="stat2" type="checkbox" onclick="question2()" value="25" />
+                                <label for="Desc">Description</label>
+                            </li>
+                        </ul>
+                    </section>
+                </article>
+                <footer align="right">
+
+                    <button type="button" onclick="SubmitFunc()">Submit</button>
+                    <button type="button" onclick="history.go(0)">Skip</button>
+
+                </footer>
+
+            </div>
+            <div id="description">
+                <article>
+
+                    <section class="">
+                        <header class="primary-bold form-control">Name: <small class="default-text"> The Great Wall </small> </header>
+                    </section>
+                    <section class="content">
+                        <span class="big-text primary-bold">Description:</span>
+
+                        <p>
+                            The Great Wall (Chinese: 长城) is a 2016 Chinese-American fantasy action monster film directed by Zhang Yimou, with a screenplay by Carlo Bernard, Doug Miro and Tony Gilroy, from a story by Max Brooks, Edward Zwick and Marshall Herskovitz. It is an American and Chinese co-production starring Matt Damon, Jing Tian, Pedro Pascal, Willem Dafoe, and Andy Lau. The Great Wall is Zhang's first English-language film.[7]
+                        </p>
+                        <p>
+                            Principal photography for the film began on March 30, 2015, in Qingdao, China, and it premiered in Beijing on December 6, 2016. It was released by China Film Group in China on December 16, 2016, and in the United States on February 17, 2017 by Universal Pictures. The film received mixed reviews from critics, who said it "sacrifices great story for great action."[8] Despite grossing over $300 million worldwide and making back the studios investment 2 times over, it was considered a box-office bomb.
+                        </p>
+
+                    </section>
+
+                </article>
+            </div>
+            <div id="image">
+
+                <img src="https://upload.wikimedia.org/wikipedia/en/c/cd/The_Great_Wall_%28film%29.png" alt="The Great Wall" />
+
+            </div>
+        </div>
+    </form>
+    <script src="content/script/index.js"></script>
+    <script>
+        showOrDisplayQuestion2(false)
+    </script>
+</body>
+</html>
